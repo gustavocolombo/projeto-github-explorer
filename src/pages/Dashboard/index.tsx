@@ -46,7 +46,7 @@ const Dashboard: React.FC = () => {
       <img src= {logo}  alt= "Github Explorer"/>
       <Title> Explore Repositórios no Github Explorer </Title>
 
-      <Form onSubmit={handleAddRepository}>
+      <Form hasError={Boolean(inputError)} onSubmit={handleAddRepository}>
         <input
         placeholder="Digite aqui o nome do repositório"
         value={newRepo}
@@ -55,7 +55,7 @@ const Dashboard: React.FC = () => {
         <button type="submit">Pesquisar</button>
       </Form>
 
-      {inputError && <Form>{inputError}</Form>}
+      {inputError && <Error>{inputError}</Error>}
 
       <Repositories>
        {repositories.map( repository => {
