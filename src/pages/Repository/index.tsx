@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
-import { Header } from '../Repository/styles';
+import { Header, RepositoryInfo } from '../Repository/styles';
 import logo from '../../assets/logo.svg';
 import { FiChevronLeft } from 'react-icons/fi';
 interface RepositoryParamas{
@@ -20,6 +20,32 @@ const Repository: React.FC = () => {
             Voltar para listagem
           </Link>
       </Header>
+
+      <RepositoryInfo>
+        <header>
+          <img src="https://avatars0.githubusercontent.com/u/28929274?s=200&v=4" alt=""/>
+            <div>
+              <strong>Titulo</strong>
+              <p>Descrição</p>
+            </div>
+
+        </header>
+        <ul>
+          <li>
+            <strong>1808</strong>
+            <span>Stars</span>
+          </li>
+          <li>
+            <strong>1808</strong>
+            <span>Forks</span>
+          </li>
+          <li>
+            <strong>1808</strong>
+            <span>Issues abertas</span>
+          </li>
+        </ul>
+      </RepositoryInfo>
+
     </>
   );
 }
